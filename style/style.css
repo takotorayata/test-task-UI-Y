@@ -1,0 +1,97 @@
+body {
+	background-color: #f6f0f5;
+	position: relative;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+html,
+body,
+.wrapper {
+	height: 100%;
+}
+
+.box {
+	width: 600px;
+	height: 350px;
+	font-size: 30px;
+	padding: 10px 30px 50px 30px;
+	background-color: white;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	border-radius: 20px;
+	display: grid;
+	grid-auto-flow: row;
+	grid-auto-rows: 1fr;
+	grid-template-rows: 1fr 2fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 'title button' 'total total' 'details details';
+}
+.box__title {
+	grid-area: title;
+	font-weight: bold;
+}
+.box__button {
+	grid-area: button;
+	background-color: #d52f6f;
+	width: 200px;
+	border-radius: 20px;
+	margin-top: 25px;
+	font-size: inherit;
+	height: 55px;
+	color: white;
+	border: 0;
+	padding: 0;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+	justify-self: right;
+}
+.box__button:hover {
+	cursor: pointer;
+	background: #c72866;
+}
+.box__totalMoney {
+	grid-area: total;
+	color: green;
+	margin: 0;
+	font-size: 60px;
+	font-weight: bold;
+}
+.box__details {
+	grid-area: details;
+}
+
+.detailBlock {
+	color: #575a68;
+	background-color: #f7f8fa;
+	border-radius: 25px;
+	display: grid;
+	padding-left: 15px;
+	padding-right: 15px;
+	grid-auto-flow: row;
+	padding: 20px;
+	border: 1px solid #edeef2;
+	grid-auto-rows: 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 'title button' 'total total';
+}
+.detailBlock__currency {
+	position: relative;
+	margin: 0;
+}
+.detailBlock__currency span {
+	margin-left: 40px;
+}
+.detailBlock__usdcImage {
+	height: 32px;
+	position: absolute;
+	top: 4px;
+}
+.detailBlock__usdc,
+.detailBlock__usdt {
+	justify-self: right;
+	margin: 10px 0 0 0;
+}
